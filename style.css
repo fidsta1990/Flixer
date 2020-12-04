@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+:root {
+  --prime-color: #3f4385;
+  --sec-color: #373b69;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--prime-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* HEADER/ NAVBAR */
+
+header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--sec-color);
+}
+
+.title h1 {
+  font-size: 3rem;
+  color: coral;
+}
+
+.title h1 span {
+  color: #fff;
+}
+
+#form {
+  position: relative;
+  height: 50px;
+}
+
+#search {
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  padding: 0.5rem;
+  height: 50px;
+  /* width: 50px; */
+  margin-right: 3rem;
+  transition: all 0.3s linear;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  font-family: inherit;
+}
+
+#search:focus {
+  outline: none;
+  padding: 0.65rem;
+}
+
+#search::placeholder {
+  color: rgba(255, 127, 80, 0.767);
+}
+
+.search-btn {
+  position: absolute;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background: coral;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  top: 0;
+  /* left: 0; */
+  right: 0;
+  height: 50px;
+  width: 50px;
+}
+
+.search-btn:hover ion-icon {
+  color: lightblue;
+  transition: color 0.3s ease;
+}
+
+/* #form.active #search {
+  width: 200px;
+}
+
+#form.active .search-btn {
+  transform: translateX(198px);
+} */
+
+/* END HEADER/ NAVBAR */
+
+/* MAIN SECTION */
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1250px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--sec-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.205);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.movie img {
+  width: 100%;
+}
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.5rem 1rem 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+  padding: 0.5rem;
+}
+
+.movie-info span {
+  background-color: var(--prime-color);
+  padding: 0.25rem 0.8rem 0 0.5rem;
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+.movie-info span.coral {
+  color: coral;
+}
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+/* END MAIN SECTION */
